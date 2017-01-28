@@ -1,0 +1,67 @@
+body{
+    background:#11455e;
+}
+.primera{
+   /* background:red */
+}
+.segunda{
+   /* background:blue */
+}
+.titulo{
+    color:white;
+    padding-top:20px
+}
+.menus-navegacion{
+    
+    padding-top:30px;
+    padding-bottom:50px
+}
+.barra-navegacion{
+    background:#2a323a
+}
+.container-fluid{
+    border:0px;
+    margin:0px
+}
+.fondo-imagen{
+    /*background-image:url('../img/fondo1.jpg');*/
+    width:100%;
+}
+
+#nombreCompleto{
+}
+.labels-formulario{
+    color:black;
+}
+.nombre-del-formulario{
+    color:black;
+    font-size:32px;
+    padding-bottom:7px; 
+}
+.container-formulario{
+    background:white;
+    width:100%;
+    
+    left:0;
+    right:0;
+}
+.pie-de-pagina{
+    background-image:url("../img/footerbg.png");
+    height:200px;
+    width:100%;
+}
+.informacion{
+    padding-top:100px;
+}
+.container{
+    width:100;
+    max-width:none;
+     
+}
+.container-fluid{
+    width:100;
+    max-width:none;
+    padding-right: 0px;
+        padding-left: 0px;
+     
+}

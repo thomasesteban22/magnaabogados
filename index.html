@@ -1,0 +1,178 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  
+    <title>Magna Abogados</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 segunda">
+            <nav class="navbar navbar-static-top barra-navegacion">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <a class="navbar-brand" href="#">
+                                    <img src="img/logo.png" />
+                                </a>
+                            </div>
+                            <div class="col-xs-7" ng-controller="mainController as vm">
+                                <h3 ng-click="vm.cambiarNombre()" class="titulo">Magna {{vm.nombre}} </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="nav navbar-nav navbar-right menus-navegacion">
+                        <li>
+                            <a href="#irAImagen">Inicio <span class="glyphicon glyphicon-home">
+                        </span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">Contacto <span class="glyphicon glyphicon-user">
+                        </span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#formulariocontc">Formulario <span class="glyphicon glyphicon-envelope">
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>  
+</div>
+
+<div class="container-fluid" >
+   <div class="row" id="irAImagen">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="fondo-imagen">
+                <img src="img/fondo1.jpg" width="100%" />
+            </div>
+        </div>
+    </div>
+    <br />  
+</div>
+<div class="container-fluid" id="formulariocontc">
+      <div class="row container-formulario container-fluid"ng-controller="contactoController as vm">
+        <div class="col-xs-12 col sm-12 col-lg-12">
+            <form ng-submit="vm.enviar(informacion)" class="form-horizontal">
+                <fieldset>
+                    <legend>
+                        <br />
+                        <h2 class="nombre-del-formulario text-center">Formulario</h2>
+                        <div class="form-group">
+                            <label for="nombreCompleto" class="col-xs-3 control-label labels-formulario">Nombre Completo
+                            </label>
+                            <div class="col-xs-9">
+                                <input type="text" ng-model="informacion.nombreCompleto" class="form-control" id="nombreCompleto" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-xs-3 control-label labels-formulario">Email
+                    </label>
+                            <div class="col-xs-9">
+                                <input ng-model="informacion.email" type="email" class="form-control" id="email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono" class="col-xs-3 control-label labels-formulario">Telefonos
+                    </label>
+                            <div class="col-xs-9">
+                                <input ng-model="informacion.telefonos"type="text" class="form-control" id="telefono" />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="tipoDeIdentificacion" class="col-xs-3 control-label labels-formulario">
+                                Tipo de identificacion
+                    </label>
+                            <div class="col-xs-9">
+                                <select ng-model="informacion.tipoDeIdentificacion" class="form-control" id="tipoDeIdentificacion">
+                                  <option value="CC">CC</option>
+                            <option value="CE">CE</option>
+                            <option value="NIT">NIT</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="identificacion" class="col-xs-3 control-label labels-formulario">Identificacion
+                    </label>
+                            <div class="col-xs-9">
+                                <input ng-model="informacion.identificacion" type="text" class="form-control" id="identificacion" />
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button class="btn btn-info pull-right" type="submit">
+                         Enviar 
+                        </button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-default pull-left" type="reset">
+                         Cancelar
+                        </button>
+                            </div>
+                        </div>
+                        <br/>
+                    </legend>
+                </fieldset>
+
+            </form>
+        </div>
+
+
+
+        <div>
+    {{vm.algo}}
+<label>
+    {{vm.informacion.nombreCompleto}}
+</label>
+<label>
+    {{vm.informacion.email}}
+</label>
+<label>
+    {{vm.informacion.telefonos}}
+</label>
+<label>
+    {{vm.informacion.tipoDeIdentificacion}}
+</label>
+<label>
+    {{vm.informacion.identificacion}}
+</label>
+         
+</div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+
+         <div class="col-xs-12 text-center pie-de-pagina">
+             <div class="informacion">
+            <font class="text-center">Bogotá Colombia</font>
+            <br />
+            <font class="text-center">Carrera 13 No.13-24, Oficina 909</font>
+            <br />
+            <font class="text-center">Edificio Lara</font>
+             </div>
+        </div>
+</div>
+      <script src="node_modules/angular/angular.js"> </script>
+    <script src="app/app.js"> </script>
+</body>
+
+</html>
